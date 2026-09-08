@@ -1,0 +1,182 @@
+body{ 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 15px;
+    padding: 25px;
+}
+
+header {
+    background-color: #11637279;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
+nav {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ nav a {
+    color : #155666;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+   width: 80%;
+   margin: 0 auto;
+    padding: 5px;
+}
+
+section h2 {
+    color: #11637279;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+section h3 {
+    color: #11637279;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+section p {
+    line-height: 1.6;
+    margin-bottom: 5%;
+}
+
+article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #11637279;
+    background-color: #f9f9f9;
+}
+
+.imagem-principal {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 20px auto; 
+}
+
+.web {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+.sistemas {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+.BD{
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+.Consultoria em tecnologia {
+    max-width: 100%;
+    width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+.funcionarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.funcionarios img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.funcionarios p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.aplicativo {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+.aplicativo img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.institucional {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+.institucional img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.vendas {
+    max-width: 100%;
+    width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+.vendas img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #11637279;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #11637279;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
