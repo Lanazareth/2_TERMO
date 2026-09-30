@@ -1,0 +1,33 @@
+.cabecalho {
+    font-family: cursive;
+    background-color: #795039;
+    color: #ffff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #795039;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+h1{
+    float: left;
+    padding-bottom: 10px;
+}
+
