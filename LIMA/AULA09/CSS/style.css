@@ -1,33 +1,397 @@
-.cabecalho {
-    font-family: cursive;
-    background-color: #795039;
-    color: #ffff;
-    text-align: center;
-    padding: 10px;
+:root {
+  --papel-creme: #F6EFE5;
+  --branco-quente: #FFFDF8;
+  --bege-cafe: #E8D6C2;
+  --marrom-espresso: #4A2C1D;
+  --madeira: #795039;
+  --terracota: #B86548;
+  --caramelo: #C69255;
+  --verde-salvia: #778064;
+  --carvao-cafe: #2C211B;
+  --bege-acinzentado: #D6C4B1;
 }
 
-nav ul {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--papel-creme);
+    color: var(--carvao-cafe);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-style: italic;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+
+body > header {
+    background-color: var(--carvao-cafe);
+    padding: 15px 8%;
     display: flex;
-    justify-content: flex-end;
-    background-color: #795039;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+body > header > :first-child {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--caramelo);
     text-decoration: none;
 }
 
-nav a {
-    text-decoration: none;
-    color: #ffff;
-}
-
-ul{
+body > header nav ul {
+    display: flex;
     list-style: none;
-    display: flex;
-    flex-direction: row;
+    gap: 25px;
+}
+
+body > header nav a {
+    color: var(--bege-cafe);
+    text-decoration: none;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+body > header nav a:hover {
+    color: var(--branco-quente);
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 8%;
+    background-color: var(--papel-creme);
+}
+
+.banner-conteudo p:first-child {
+    color: var(--caramelo);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.banner-conteudo h1 {
+    font-size: 46px;
+    color: var(--carvao-cafe);
+    margin-bottom: 15px;
+}
+
+.banner-conteudo p:nth-of-type(2) {
+    color: var(--marrom-espresso);
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.banner-conteudo a {
+    background-color: var(--madeira);
+    color: var(--branco-quente);
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.banner-imagem img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(44, 33, 27, 0.1);
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: var(--verde-salvia);
+    color: var(--branco-quente);
+}
+
+.sobre-smartcoffe img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.sobre-cabecalho p {
+    color: var(--bege-cafe);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.sobre-cabecalho h2 {
+    font-size: 38px;
+    color: var(--bege-cafe);
+    margin-bottom: 15px;
+}
+
+.sobre > p {
+    font-style: italic;
+    font-size: 16px;
+    color: var(--branco-quente);
+    margin-bottom: 25px;
+}
+
+.sobre > a {
+    background-color: transparent;
+    border: 2px solid var(--bege-cafe);
+    color: var(--bege-cafe);
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.cafes {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: var(--branco-quente);
+}
+
+.lisda-cafes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    list-style: none;
+    margin-top: 40px;
 }
 
-h1{
-    float: left;
-    padding-bottom: 10px;
+.card-cafes {
+    background-color: var(--branco-quente);
+    border-radius: 20px;
+    border: 1px solid var(--carvao-cafe);
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
+.imagem-cafes img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card-cafes h3 {
+    color: var(--carvao-cafe);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.card-cafes p {
+    color: var(--madeira);
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card-cafes strong {
+    color: var(--terracota);
+    font-style: italic;
+    font-size: 22px;
+}
+
+
+.ambiente {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 8%;
+    background-color: var(--marrom-espresso);
+    color: var(--branco-quente);
+}
+
+.ambiente header p:first-child {
+    color: var(--caramelo);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.ambiente header h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.ambiente header p:last-of-type {
+    color: var(--bege-cafe);
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.ambiente header a {
+    background-color: var(--caramelo);
+    color: var(--carvao-cafe);
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ambiente-imagem img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: var(--papel-creme);
+    align-items: start;
+}
+
+.contato-cabecalho h2 {
+    color: var(--carvao-cafe);
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.contato-cabecalho p {
+    color: var(--madeira);
+    font-style: italic;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+form label {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--carvao-cafe);
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--carvao-cafe);
+    border-radius: 4px;
+    background-color: var(--branco-quente);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+form button {
+    background-color: var(--terracota);
+    color: var(--branco-quente);
+    padding: 15px;
+    border: none;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--madeira);
+}
+
+
+footer {
+    background-color: var(--carvao-cafe);
+    color: var(--bege-cafe);
+    padding: 40px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p:first-child {
+    font-size: 24px;
+    color: var(--caramelo);
+    font-style: italic;
+    font-weight: 900;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+footer nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--branco-quente);
+    color: var(--carvao-cafe);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+footer nav a:hover {
+    background-color: var(--caramelo);
+    color: var(--branco-quente);
+}
+
+footer p:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .banner, .sobre, .ambiente, .contato {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .lisda-cafes {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-smartcoffe img, .ambiente-imagem img {
+        order: -1; 
+    }
+    
+    form {
+        text-align: left;
+    }
+}
