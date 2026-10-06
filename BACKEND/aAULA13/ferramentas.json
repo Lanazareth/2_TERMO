@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "pastilha",
+    "quantidade": 50,
+    "custoUnitario": 49.9
+  },
+  {
+    "nome": "martelo",
+    "quantidade": 30,
+    "custoUnitario": 15.7
+  },
+  {
+    "nome": "prego",
+    "quantidade": 256,
+    "custoUnitario": 1.5
+  }
+]
