@@ -1,0 +1,110 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+h2 {
+  margin-top: 30px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* ==================================================
+   EXERCÍCIO 01 & 02: ATIVE E ESPACE
+   ================================================== */
+.equipe {
+  display: flex;      /* EX 01: Ativa o Flexbox */
+  gap: 30px;          /* EX 02: Espaçamento de 30px sem margem individual */
+  list-style: none;   /* Remove as bolinhas da lista */
+  padding: 0;
+}
+
+.equipe li {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+/* ==================================================
+   EXERCÍCIO 03: DISTRIBUA (JUSTIFY-CONTENT)
+   ================================================== */
+.ex3-box {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 10px;
+  background-color: #e2e8f0;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.ex3-box li {
+  background-color: #3182ce;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+/* Testes de Justify-Content */
+.jc-start { justify-content: flex-start; }  /* Puxa para a esquerda */
+.jc-center { justify-content: center; }      /* Centraliza no meio */
+.jc-end { justify-content: flex-end; }        /* Puxa para a direita */
+.jc-between { justify-content: space-between; } /* Cola nas pontas e distribui o meio */
+.jc-evenly { justify-content: space-evenly; }   /* Espaços iguais em toda a largura */
+
+/* ==================================================
+   EXERCÍCIO 04: ALINHE (ALIGN-ITEMS)
+   ================================================== */
+.area-alinhar {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 10px;
+  background-color: #e2e8f0;
+  height: 140px; /* Altura fixa para ver a diferença vertical */
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+/* Elementos com alturas diferentes */
+.item1 { height: 40px; background-color: #e53e3e; color: white; padding: 10px; }
+.item2 { height: 100px; background-color: #dd6b20; color: white; padding: 10px; }
+.item3 { height: 70px; background-color: #38a169; color: white; padding: 10px; }
+
+/* Testes de Align-Items no Pai */
+.ai-start { align-items: flex-start; } /* Alinha no topo */
+.ai-center { align-items: center; }     /* Alinha no centro vertical */
+.ai-end { align-items: flex-end; }       /* Alinha na base */
+
+/* ==================================================
+   EXERCÍCIO 05: CORRIJA O LAYOUT (CARDS)
+   ================================================== */
+/* A CORREÇÃO: O display: flex e gap entram na classe .cards (o pai <ul>) */
+.cards {
+  display: flex;        /* Transforma a <ul> em flex container */
+  gap: 20px;            /* Espaço de 20px entre os produtos */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards li {
+  flex: 1; /* Faz cada item ocupar a mesma largura */
+}
+
+.cards article {
+  background-color: #2b6cb0;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
