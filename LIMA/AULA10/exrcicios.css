@@ -1,0 +1,68 @@
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+}
+
+.equipe {
+    display: flex;
+    gap: 30px;
+ justify-content: flex-start; /* Padrão: agrupa tudo no início (esquerda) */
+    /* justify-content: center; */ /* Centraliza todos os itens no meio */
+    /* justify-content: flex-end; */ /* Agrupa tudo no final (direita) */
+    /* justify-content: space-between; */ /* Joga o 1º pro começo, o último pro final e divide o resto no meio */
+    /* justify-content: space-evenly; */ /* Cria um espaçamento exatamente igual ao redor de todos os itens */
+}
+
+.equipe .item {
+    background-color: #6b6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+
+.container-alturas {
+    display: flex;
+    gap: 10px;
+    background-color: #ddd;
+    height: 150px;
+    align-items: center;
+}
+
+.caixa {
+    width: 80px;
+    background-color: #626364;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alta { 
+    height: 120px; 
+}
+
+.media { 
+    height: 80px; 
+}
+
+.baixa { 
+    height: 40px; 
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.produto {
+    background-color: #5e5d5c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
