@@ -1,0 +1,109 @@
+.grid-ex1{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    gap:23px;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    background-color: #f19d76;
+}
+
+.grid-gal-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(223px, 1fr));
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.flex-grid{
+    display: contents;
+    align-items: center;
+    gap: 40px;
+}
+
+.lab-grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONFIGURAÇÕA DE RESPONSIVIDAE */
+@media (max-width: 800px){
+    .lab-grid{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .lab-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 700px){
+    .flex-grid{
+        flex-direction: column;
+    }
+}
+
+/* @media (max-width: 120px) {
+    .grid-ex1 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+/* } */ 
+/* configuracões de midias para dispositivos  */
+/* DESKTOP */
+.grid-ex1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+/* tablet */
+@media( max-width:900px) {
+    .grid-ex1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-gal-img{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* celular */
+@media( max-width:600px) {
+    .grid-ex1{
+        grid-template-columns: 1fr ;
+    }
+    .grid-gal-img {
+        grid-template-columns: 1fr;
+    }
+}
