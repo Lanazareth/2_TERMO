@@ -1,0 +1,161 @@
+/* root: podemos guardar nossas cores e informações gerais em um unico lugar */
+
+:root{
+    /* paleta */
+    --vinho: #8B0000;
+    --azul:#0b3974;
+    --creme: #FFFFF0;
+    --cinza:#4e5965;
+    --branco:#FFFFFF;
+
+    /* tipografia */
+    --fonte-principal: 'Times New Roman', serif;
+    --fonte-texto: 'arial';
+    --fonte-segundaria: "Abel", sans-serif;
+
+    /* espaçamento */
+    --espaço-xs:4px;
+    --espaço-sm:8px;
+    --espaço-md:16px;
+    --espaço-lg:24px;
+    }
+
+/* comfigurações de reset basico */
+*{
+    /* permitr alterar configuraçõs de todo o html */
+    box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: var(--fonte-segundaria);
+    font-weight: 800;
+    color: var(--azul);
+    background-color: var(--creme);
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+/* fim das confihurações basicas */
+.id-v{
+    height: 100px;
+    background-color: var(--vinho);
+    color: var(--creme);
+    font-family: var(--fonte-texto);
+}
+
+h1, h2, h3{  
+    margin-top: 0;
+    color: var(--azul);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.25rem;
+}
+.id-nav{
+    display: flex;
+    gap: var(--espaço-lg);
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+}
+
+id-nav a {
+    color: var(--vinho);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.id-v a:hover{
+        color: var(--cinza);
+    }
+
+    /* aplicação de funcionalidades e acessibilidade por teclado */
+
+.id-nav a:focus-visible{
+    outline: 10px deshed var(--branco);
+    outline-offset: 10px;
+}
+
+.id-ban{
+     display: flex;
+     align-items: center;
+     gap:40px;
+     padding: 80px 8%;
+     background-color: var(--branco);
+
+}
+
+.id-ban-img{
+ flex: 1;
+ margin: p;
+}
+
+.id-ban-img img{
+    width: 100%;
+    border-radius: 18px;
+}
+
+.botao-id {
+   display: inline-block;
+   margin-top: 16px;
+   padding: 12px 24px;
+   background-color: var(--azul);
+   color: var(--branco);
+   text-decoration: none;
+   font-weight: 600;
+   border-radius: 16px;
+   transition: backgroud-color 0.5s ease;
+}
+
+.botao-id:hover{
+    background-color: var(--creme);
+}
+.id-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.id-grid-cart{
+    height: 100%;
+    padding: 20px;
+    background-color: var(--branco);
+    border: 2px solid var(--azul);
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.id-grid-cart img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgb(78, 89, 101);
+}
+
+.id-grid-cart:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px  rgb(78, 89, 101);
+}
+
+
