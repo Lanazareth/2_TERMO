@@ -1,14 +1,19 @@
+
+/* =========================================
+   1. PALETA DE CORES E CONFIGURAÇÕES GERAIS
+========================================= */
+
 :root {
-  --papel-creme: #F6EFE5;
-  --branco-quente: #FFFDF8;
-  --bege-cafe: #E8D6C2;
-  --marrom-espresso: #4A2C1D;
-  --madeira: #795039;
-  --terracota: #B86548;
-  --caramelo: #C69255;
-  --verde-salvia: #778064;
-  --carvao-cafe: #2C211B;
-  --bege-acinzentado: #D6C4B1;
+    --papel-creme: #F6EFE5;
+    --branco-quente: #FFFDF8;
+    --bege-cafe: #E8D6C2;
+    --marrom-espresso: #4A2C1D;
+    --madeira: #795039;
+    --terracota: #B86548;
+    --caramelo: #C69255;
+    --verde-salvia: #778064;
+    --carvao-cafe: #2C211B;
+    --bege-acinzentado: #D6C4B1;
 }
 
 * {
@@ -17,80 +22,120 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--papel-creme);
     color: var(--carvao-cafe);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-style: italic;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+figure {
+    min-width: 0;
+}
+
+
+/* =========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+========================================= */
 
 body > header {
     background-color: var(--carvao-cafe);
-    padding: 15px 8%;
+    padding: 15px 5%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
+
     position: sticky;
     top: 0;
     z-index: 100;
+
+    box-shadow: 0 4px 15px rgba(44, 33, 27, 0.12);
 }
 
+/* Logo */
 
-body > header > :first-child {
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 900;
+body > header nav ul h2 {
     color: var(--caramelo);
-    text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
+    white-space: nowrap;
 }
+
+/* Lista de navegação */
 
 body > header nav ul {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 25px;
+    gap: 28px;
 }
+
+/* Links */
 
 body > header nav a {
     color: var(--bege-cafe);
     text-decoration: none;
     font-style: italic;
-    text-transform: capitalize;
-    font-size: 15px;
-    transition: 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+
+    transition: color 0.3s ease;
 }
 
 body > header nav a:hover {
-    color: var(--branco-quente);
+    color: var(--caramelo);
 }
+
+
+/* =========================================
+   3. BANNER INICIAL
+========================================= */
 
 .banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
-    padding: 80px 8%;
+    gap: 60px;
+
+    padding: 90px 8%;
     background-color: var(--papel-creme);
 }
 
 .banner-conteudo p:first-child {
-    color: var(--caramelo);
+    color: var(--terracota);
     font-style: italic;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
 .banner-conteudo h1 {
-    font-size: 46px;
+    font-size: clamp(34px, 4vw, 56px);
     color: var(--carvao-cafe);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .banner-conteudo p:nth-of-type(2) {
@@ -103,295 +148,752 @@ body > header nav a:hover {
 .banner-conteudo a {
     background-color: var(--madeira);
     color: var(--branco-quente);
-    padding: 12px 28px;
+
+    padding: 13px 30px;
     text-decoration: none;
     border-radius: 50px;
+
     font-style: italic;
     font-weight: bold;
+
     display: inline-block;
+    transition: 0.3s ease;
+}
+
+.banner-conteudo a:hover {
+    background-color: var(--terracota);
+    transform: translateY(-3px);
+}
+
+/* Imagem do banner */
+
+.banner-imagem {
+    overflow: hidden;
+    border-radius: 24px;
 }
 
 .banner-imagem img {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(44, 33, 27, 0.1);
+    height: 430px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(44, 33, 27, 0.15);
+
+    transition: transform 0.5s ease;
 }
+
+.banner-imagem:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   4. SEÇÃO SOBRE NÓS
+========================================= */
 
 .sobre {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+
     align-items: center;
-    gap: 50px;
-    padding: 80px 8%;
+    gap: 20px 60px;
+
+    padding: 90px 8%;
+
     background-color: var(--verde-salvia);
     color: var(--branco-quente);
 }
 
-.sobre-smartcoffe img {
-    width: 100%;
-    border-radius: 20px;
+/* Imagem */
+
+.sobre-smartcoffe {
+    grid-column: 1;
+    grid-row: 1 / 4;
+
+    overflow: hidden;
+    border-radius: 24px;
 }
 
-.sobre-cabecalho p {
+.sobre-smartcoffe img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 24px;
+
+    transition: transform 0.5s ease;
+}
+
+.sobre-smartcoffe:hover img {
+    transform: scale(1.04);
+}
+
+/* Cabeçalho da seção */
+
+.sobre-cabecalho {
+    grid-column: 2;
+    grid-row: 1;
+
+    align-self: end;
+}
+
+.sobre-cabecalho p:first-child {
     color: var(--bege-cafe);
     font-style: italic;
     font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .sobre-cabecalho h2 {
-    font-size: 38px;
-    color: var(--bege-cafe);
+    font-size: clamp(32px, 3vw, 44px);
+    color: var(--branco-quente);
+    margin-bottom: 20px;
+}
+
+.sobre-cabecalho p:not(:first-child) {
+    color: var(--branco-quente);
+    font-size: 15px;
     margin-bottom: 15px;
 }
 
+/* Frase abaixo do texto */
+
 .sobre > p {
+    grid-column: 2;
+    grid-row: 2;
+
+    color: var(--bege-cafe);
     font-style: italic;
-    font-size: 16px;
-    color: var(--branco-quente);
-    margin-bottom: 25px;
+    font-size: 15px;
+    margin-top: 5px;
 }
+
+/* Botão */
 
 .sobre > a {
+    grid-column: 2;
+    grid-row: 3;
+
+    justify-self: start;
+
     background-color: transparent;
     border: 2px solid var(--bege-cafe);
+
     color: var(--bege-cafe);
-    padding: 10px 30px;
+
+    padding: 11px 30px;
     text-decoration: none;
     border-radius: 50px;
+
     font-style: italic;
     font-weight: bold;
-    display: inline-block;
+
+    transition: 0.3s ease;
 }
 
+.sobre > a:hover {
+    background-color: var(--bege-cafe);
+    color: var(--marrom-espresso);
+}
+
+
+/* =========================================
+   5. SEÇÃO DE CAFÉS E PRODUTOS
+========================================= */
+
 .cafes {
-    padding: 80px 8%;
+    padding: 90px 8%;
     text-align: center;
     background-color: var(--branco-quente);
 }
 
+/* Lista dos produtos */
+
 .lisda-cafes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 30px;
     list-style: none;
     margin-top: 40px;
 }
 
+.lisda-cafes li {
+    min-width: 0;
+}
+
+/* Card */
+
 .card-cafes {
-    background-color: var(--branco-quente);
-    border-radius: 20px;
-    border: 1px solid var(--carvao-cafe);
-    padding: 15px;
+    height: 100%;
+
+    background-color: var(--papel-creme);
+    border-radius: 22px;
+
+    border: 1px solid rgba(74, 44, 29, 0.12);
+
+    padding: 18px;
     text-align: left;
+
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card-cafes:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(44, 33, 27, 0.12);
+}
+
+/* Imagens dos produtos */
+
+.imagem-cafes {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 20px;
 }
 
 .imagem-cafes img {
     width: 100%;
-    height: 180px;
+    height: 240px;
+
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    object-position: center;
+
+    border-radius: 16px;
+
+    transition: transform 0.5s ease;
 }
+
+.card-cafes:hover .imagem-cafes img {
+    transform: scale(1.05);
+}
+
+/* Textos */
 
 .card-cafes h3 {
     color: var(--carvao-cafe);
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 21px;
+    margin-bottom: 8px;
 }
 
 .card-cafes p {
     color: var(--madeira);
     font-style: italic;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     flex-grow: 1;
 }
 
 .card-cafes strong {
     color: var(--terracota);
     font-style: italic;
-    font-size: 22px;
+    font-size: 23px;
+    margin-top: auto;
 }
 
+
+/* =========================================
+   6. SEÇÃO AMBIENTE
+========================================= */
 
 .ambiente {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
-    gap: 40px;
-    padding: 80px 8%;
+    gap: 60px;
+
+    padding: 90px 8%;
+
     background-color: var(--marrom-espresso);
     color: var(--branco-quente);
 }
+
+/* Textos */
 
 .ambiente header p:first-child {
     color: var(--caramelo);
     font-style: italic;
     font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
 .ambiente header h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
+    font-size: clamp(32px, 3vw, 44px);
+    margin-bottom: 20px;
 }
 
 .ambiente header p:last-of-type {
     color: var(--bege-cafe);
     font-style: italic;
+    font-size: 16px;
     margin-bottom: 30px;
 }
+
+/* Botão */
 
 .ambiente header a {
     background-color: var(--caramelo);
     color: var(--carvao-cafe);
-    padding: 12px 28px;
+
+    padding: 13px 30px;
     text-decoration: none;
     border-radius: 50px;
+
     font-style: italic;
     font-weight: bold;
+
     display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.ambiente header a:hover {
+    background-color: var(--bege-cafe);
+    transform: translateY(-3px);
+}
+
+/* Imagem do ambiente */
+
+.ambiente-imagem {
+    overflow: hidden;
+    border-radius: 24px;
 }
 
 .ambiente-imagem img {
     width: 100%;
-    border-radius: 20px;
+    height: 420px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 24px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.5s ease;
 }
 
+.ambiente-imagem:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   7. SEÇÃO DE CONTATO
+========================================= */
 
 .contato {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 80px 8%;
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    padding: 90px 8%;
+
     background-color: var(--papel-creme);
-    align-items: start;
+    align-items: center;
 }
+
+/* Cabeçalho */
 
 .contato-cabecalho h2 {
     color: var(--carvao-cafe);
-    font-size: 38px;
-    margin-bottom: 10px;
+    font-size: clamp(32px, 3vw, 44px);
+    margin-bottom: 15px;
 }
 
 .contato-cabecalho p {
     color: var(--madeira);
     font-style: italic;
+    font-size: 16px;
 }
 
-form {
+/* Formulário */
+
+#formContato {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+
+    background-color: var(--branco-quente);
+
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(44, 33, 27, 0.06);
 }
 
-form label {
+#formContato label {
     font-size: 13px;
     font-style: italic;
+    font-weight: 600;
+
     color: var(--carvao-cafe);
-    margin-bottom: 5px;
-    margin-top: 10px;
+
+    margin-bottom: 7px;
+    margin-top: 15px;
 }
 
-form input, form textarea {
+#formContato input,
+#formContato textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid var(--carvao-cafe);
-    border-radius: 4px;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--bege-acinzentado);
+    border-radius: 8px;
+
     background-color: var(--branco-quente);
+
     font-family: inherit;
     font-size: 15px;
+    color: var(--carvao-cafe);
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-form textarea {
-    height: 100px;
+/* Foco nos campos */
+
+#formContato input:focus,
+#formContato textarea:focus {
+    border-color: var(--terracota);
+
+    box-shadow: 0 0 0 3px rgba(184, 101, 72, 0.12);
+}
+
+#formContato textarea {
+    min-height: 130px;
     resize: vertical;
 }
 
-form button {
+/* Botão */
+
+#formContato button {
     background-color: var(--terracota);
     color: var(--branco-quente);
+
     padding: 15px;
+
     border: none;
+    border-radius: 8px;
+
     font-style: italic;
     font-weight: bold;
     font-size: 16px;
+
     cursor: pointer;
-    margin-top: 20px;
-    transition: 0.3s;
+    margin-top: 25px;
+
+    transition: 0.3s ease;
 }
 
-form button:hover {
+#formContato button:hover {
     background-color: var(--madeira);
+    transform: translateY(-2px);
 }
 
 
-footer {
+/* =========================================
+   8. RODAPÉ
+========================================= */
+
+.rodape {
     background-color: var(--carvao-cafe);
     color: var(--bege-cafe);
-    padding: 40px 8%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+
+    padding: 50px 8% 0;
+
+    text-align: center;
+
+    border-top: 2px solid var(--terracota);
 }
 
-footer p:first-child {
-    font-size: 24px;
+.rodape-conteudo {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Logo do rodapé */
+
+.rodape h3 {
+    font-size: 30px;
     color: var(--caramelo);
+
     font-style: italic;
     font-weight: 900;
+
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-footer nav ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
+.rodape-frase {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--bege-acinzentado);
+
+    margin-bottom: 30px;
 }
 
-footer nav a {
+/* Redes sociais */
+
+.redes-sociais {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: var(--branco-quente);
-    color: var(--carvao-cafe);
+
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.redes-sociais a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: transparent;
+    color: var(--caramelo);
+
+    border: 1px solid var(--madeira);
     border-radius: 50%;
+
     text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 18px;
+
+    transition: 0.3s ease;
 }
 
-footer nav a:hover {
-    background-color: var(--caramelo);
+.redes-sociais a:hover {
+    background-color: var(--terracota);
     color: var(--branco-quente);
+
+    border-color: var(--terracota);
+
+    transform: translateY(-5px);
 }
 
-footer p:last-child {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    opacity: 0.7;
+/* Direitos autorais */
+
+.rodape-final {
+    border-top: 1px solid rgba(232, 214, 194, 0.15);
+
+    padding: 20px 10px;
 }
+
+.rodape-final p {
+    margin: 0;
+
+    font-size: 12px;
+    color: var(--bege-acinzentado);
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   9. TABLETS
+========================================= */
 
 @media (max-width: 900px) {
-    .banner, .sobre, .ambiente, .contato {
+
+    body > header {
+        padding: 15px 4%;
+        gap: 15px;
+    }
+
+    body > header nav ul {
+        gap: 16px;
+    }
+
+    body > header nav ul h2 {
+        font-size: 24px;
+    }
+
+    body > header nav a {
+        font-size: 13px;
+    }
+
+    .banner,
+    .sobre,
+    .ambiente {
+        gap: 35px;
+        padding: 65px 6%;
+    }
+
+    .banner-imagem img {
+        height: 350px;
+    }
+
+    .sobre-smartcoffe img {
+        height: 430px;
+    }
+
+    .ambiente-imagem img {
+        height: 350px;
+    }
+
+    .lisda-cafes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contato {
+        gap: 35px;
+        padding: 65px 6%;
+    }
+}
+
+
+/* =========================================
+   10. CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    body > header {
+        flex-direction: column;
+        padding: 18px 15px;
+        gap: 15px;
+    }
+
+    body > header nav {
+        width: 100%;
+    }
+
+    body > header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    body > header nav ul h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 27px;
+        margin-bottom: 5px;
+    }
+
+    body > header nav a {
+        font-size: 12px;
+    }
+
+    .banner,
+    .sobre,
+    .ambiente,
+    .contato {
         grid-template-columns: 1fr;
         text-align: center;
+
+        padding: 50px 6%;
+        gap: 30px;
     }
-    
+
+    /* Banner */
+
+    .banner-conteudo h1 {
+        font-size: 36px;
+    }
+
+    .banner-imagem img {
+        height: 280px;
+    }
+
+    /* Sobre nós */
+
+    .sobre-smartcoffe {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sobre-smartcoffe img {
+        height: 300px;
+    }
+
+    .sobre-cabecalho {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .sobre > p {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .sobre > a {
+        grid-column: 1;
+        grid-row: 4;
+
+        justify-self: center;
+    }
+
+    /* Produtos */
+
     .lisda-cafes {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
-    
-    .sobre-smartcoffe img, .ambiente-imagem img {
-        order: -1; 
+
+    .imagem-cafes img {
+        height: 250px;
     }
-    
-    form {
+
+    /* Ambiente */
+
+    .ambiente-imagem {
+        grid-row: 2;
+    }
+
+    .ambiente-imagem img {
+        height: 280px;
+    }
+
+    /* Contato */
+
+    .contato {
+        text-align: center;
+    }
+
+    #formContato {
+        padding: 22px;
         text-align: left;
+    }
+
+    /* Rodapé */
+
+    .rodape {
+        padding: 40px 15px 0;
+    }
+
+    .rodape h3 {
+        font-size: 26px;
+    }
+
+    .redes-sociais {
+        gap: 15px;
+    }
+
+    .redes-sociais a {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
     }
 }
