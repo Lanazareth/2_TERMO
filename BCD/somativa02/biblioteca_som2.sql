@@ -55,8 +55,7 @@ CREATE TABLE categorias (
 
 CREATE TABLE autores (
     id_autor INT AUTO_INCREMENT PRIMARY KEY,
-    primeiro_nome VARCHAR(50) NOT NULL,
-    ultimo_nome VARCHAR(50) NOT NULL,
+    nome VARCHAR(60) NOT NULL,
     nacionalidade VARCHAR(50),
     data_nascimento DATE
 );
@@ -297,4 +296,4 @@ COMMIT;
    - Justificativa: mesmio que possa ser verificad no banco, a validação de disponibilidade de estoque antes de iniciar a transação de empréstimo deve ser tratada prioritariamente na lógica do sistema/aplicação (RN14) antes da tentativa de persistência.
 */
 
--- =======================================================
+-- ===========================================================
