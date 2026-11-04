@@ -1,176 +1,273 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="shortcut icon" href="img/logotipo.ico" type="image/x-icon">
-    <title> SmartCoffee - seu café moderno e futurista</title>
-</head>
-<body>
-    <header>
-        <h1</h1>
 
-        <nav>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Uma viagem nostálgica pelos clássicos da TV, heróis e animações que marcaram gerações.">
+
+    <title>Nostalgia Play | Histórias que atravessaram gerações</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo-text">NOSTALGIA PLAY</h1>
+
+        <nav aria-label="Navegação principal">
             <ul>
-                 <h2>smartcoffee</h2>
-                 
-                <li><a href="#inicio">inicio</a></li>
-                <li><a href="#sobre">sobre</a></li>
-                <li><a href="#cafes">Produtos</a></li>
-                <li><a href="#ambiente">ambiente</a></li>
-                <li><a href="#contato">contato</a></li>
+                <li>
+                    <a href="#inicio" class="active">Início</a>
+                </li>
+
+                <li>
+                    <a href="#classicos">Clássicos</a>
+                </li>
+
+                <li>
+                    <a href="#herois">Heróis</a>
+                </li>
+
+                <li>
+                    <a href="#hoje">Hoje</a>
+                </li>
+
+                <li>
+                    <a href="#sobre" class="meu-botao">Sobre</a>
+                </li>
             </ul>
         </nav>
     </header>
-    
-<main>
-      <section id="inicio" class="banner">
-            <header class="banner-conteudo">
-                <p>Sobores que conectam</p>
-                <h1>Café que conecta pessoas</h1>
-                <p>Mais que café, uma experiencia</p>
-                <a href="#cafes">Ver carpadio</a>
+
+    <main>
+
+        <!-- SEÇÃO INICIAL -->
+        <section id="inicio" class="hero-section">
+
+            <article class="hero-text">
+                <p>80 . 90 . 2000</p>
+
+                <h2>HISTÓRIAS QUE ATRAVESSARAM GERAÇÕES.</h2>
+
+                <p>
+                    Uma viagem pela TV, pelos heróis e pelas animações
+                    que transformaram tardes comuns em grandes aventuras.
+                </p>
+
+                <a href="#classicos" class="meu-botao">
+                    Apertar o Play
+                </a>
+            </article>
+
+            <figure class="hero-image">
+                <img
+                    class="img_principal"
+                    src="https://i.pinimg.com/736x/a3/25/13/a325138df60778379ab85065c9842f1b.jpg"
+                    alt="Personagens e animações que marcaram gerações"
+                >
+            </figure>
+
+        </section>
+
+
+        <!-- SEÇÃO CLÁSSICOS -->
+        <section id="classicos" class="modelos-section">
+
+            <header>
+                <p>ANTES DOS ANOS 90</p>
+
+                <h2>CLÁSSICOS QUE CHEGARAM PARA FICAR</h2>
+
+                <p class="section-subtitle">
+                    Duas produções anteriores aos anos 90 que permaneceram
+                    vivas na memória de quem cresceu cercado por fantasia
+                    e aventura.
+                </p>
             </header>
 
-            <figure class="banner-imagem">
-                <img src="https://i.pinimg.com/1200x/67/5a/ce/675ace2c99404fbab403c7762effada1.jpg" alt="cafe servido pela SmartCoffee">
-            </figure>
-      </section>
+            <section class="modelos-grid" aria-label="Clássicos da televisão">
 
-      <section id="sobre" class="sobre">
-        <figure class="sobre-smartcoffe">
-            <img src="https://i.pinimg.com/1200x/a1/de/85/a1de856ca08ae9d905de5e0d5857d392.jpg" alt="ambiente SmartCoffee">
-        </figure>
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/1f/ee/7b/1fee7b0451af0aa4b98e6060e1296818.jpg"
+                        alt="Cavaleiros do Zodíaco"
+                    >
 
-        <header class="sobre-cabecalho">
-            <p>Quem somos</p>
-            <h2>Sobre nos</h2>
-            <p>O SmartCoffee nasceu da paixão por café e pelo desejo de criar momentos especiais. Somos um espaço onde o aroma de um bom café se encontra com um ambiente acolhedor, perfeito para relaxar, compartilhar ideias e aproveitar cada instante.</p>
-            <p>Acreditamos que os melhores momentos começam com uma boa xícara de café. Por isso, valorizamos cada detalhe, desde a qualidade dos nossos produtos até o cuidado em receber cada cliente.</p>
-        </header>
-        <p>Café, tecnologia e boas experiencias</p>
-        <a href="#">saiba mais</a>
-      </section>
+                    <p>1986</p>
 
-      <section id="cafes" class="cafes">
-        <ul class="lisda-cafes">
-            <li>
-                <article class="card-cafes">
-                  <figure class="imagem-cafes">
-                      <img src="https://i.pinimg.com/236x/9e/57/cf/9e57cf3078dc72f2315a1201ef96bc42.jpg" alt="cafe-tradicional">
-                  </figure>
-                  <h3>café tradicional</h3>
-                  <p>Equilibrio entre sabor e cremosidade.</p>
-                  <strong>R$ 14,90</strong>
+                    <h3>CAVALEIROS DO ZODÍACO</h3>
                 </article>
-            </li>
-            <li>
-                <article class="card-cafes">
-                  <figure class="imagem-cafes">
-                      <img src="https://i.pinimg.com/736x/53/df/59/53df59cde011f86d8ff4dc6827303e08.jpg" alt="late-caramelo">
-                  </figure>
-                  <h3>late Caramelo</h3>
-                  <p>leve, doce e irresistivel.</p>
-                  <strong>R$ 16,90</strong>
+
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/736x/97/f2/39/97f2398cb6e4936c5b8cfddef1fbb4e9.jpg"
+                        alt="Caverna do Dragão"
+                    >
+
+                    <p>1983</p>
+
+                    <h3>CAVERNA DO DRAGÃO</h3>
                 </article>
-            </li>
-            <li>
-                <article class="card-cafes">
-                  <figure class="imagem-cafes">
-                      <img src="https://i.pinimg.com/736x/92/e1/45/92e145287ada0f722fbaef0beb6f7db9.jpg" alt="cafe-expresso">
-                  </figure>
-                  <h3>café Expresso</h3>
-                  <p>Intenso como boas coversas.</p>
-                  <strong>R$ 12,90</strong>
+
+            </section>
+
+        </section>
+
+
+        <!-- SEÇÃO HERÓIS -->
+        <section id="herois" class="modelos-section">
+
+            <header>
+                <p>FAIXA ESPECIAL</p>
+
+                <h2>HERÓIS QUE DOMINAVAM A TV</h2>
+
+                <p class="section-subtitle">
+                    Tokusatsu, ação e personagens que viraram memória afetiva.
+                </p>
+            </header>
+
+            <section class="modelos-grid" aria-label="Heróis clássicos">
+
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/736x/44/94/f3/4494f38e191dd4248ebaf84099d90bd0.jpg"
+                        alt="Jaspion"
+                    >
+
+                    <p>METAL HERO</p>
+
+                    <h3>JASPION</h3>
                 </article>
-            </li>
-        </ul>
-      </section>
 
-      <section id="ambiente" class="ambiente">
-          <header class="nosso ambiente">
-            <p>nosso ambiente</p>
-            <h2>um espaço para boas ideias</h2>
-            <p>ambiente moderno, confortavel e acolhedor.</p>
-            <a href="#contato">conheça nosso espaço</a>
-          </header>
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/a8/6f/1d/a86f1d359565a9131294c451219bba54.jpg"
+                        alt="Jiraiya"
+                    >
 
-          <figure class="ambiente-imagem">
-            <img src="https://i.pinimg.com/736x/e8/40/4d/e8404d48e49145f22fab7281b0babe66.jpg" alt="Espaço Interno SmartCoffee">
-          </figure>
-      </section>
+                    <p>NINJA HERO</p>
 
-      <section id="contato" class="contato">
-        <header class="contato-cabecalho">
-            <h2>Fale com a gente</h2>
-            <p>Entre em contato com a nossa equipe</p>
-        </header>
+                    <h3>JIRAIYA</h3>
+                </article>
 
-       <form id="formContato">
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/85/83/3b/85833b691bfddf60a0d8cef0c418464d.jpg"
+                        alt="Kamen Rider Black"
+                    >
 
-    <label for="nome">nome:</label>
-    <input type="text" id="nome" name="nome" required>
+                    <p>TOKUSATSU</p>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+                    <h3>KAMEN RIDER BLACK</h3>
+                </article>
 
-    <label for="mensagem">mensagem:</label>
-    <textarea
-        name="mensagem"
-        id="mensagem"
-        required
-    ></textarea>
+            </section>
 
-    <button type="submit">Enviar mensagem</button>
+        </section>
 
-</form>
-      </section>
-</main>
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
->
+        <!-- SEÇÃO PRODUÇÕES ATUAIS -->
+        <section id="hoje" class="modelos-section">
 
-<footer class="rodape">
-    <div class="rodape-conteudo">
+            <header>
+                <p>O PASSADO CONTINUA PRESENTE</p>
 
-        <h3>L³.js</h3>
+                <h2>
+                    NOVAS PRODUÇÕES,
+                    <br>
+                    VELHAS EMOÇÕES.
+                </h2>
+            </header>
 
-        <p class="rodape-frase">
-            o café que traz sua paz.
+            <section class="hoje-lista" aria-label="Produções atuais">
+
+                <article class="card3">
+                    <img
+                        src="https://i.pinimg.com/736x/3f/2e/41/3f2e41c6d81d99bad4d0da88fd2b4271.jpg"
+                        alt="X-Men 97"
+                    >
+
+                    <h3>01</h3>
+
+                    <p>CONTINUAÇÃO</p>
+
+                    <h4>X-MEN'97</h4>
+                </article>
+
+                <article class="card4">
+                    <img
+                        src="https://i.pinimg.com/736x/07/31/dc/0731dccc6a782c61f4243619b507a366.jpg"
+                        alt="Os Simpsons"
+                    >
+
+                    <h3>02</h3>
+
+                    <p>CULTURA POP</p>
+
+                    <h4>OS SIMPSONS</h4>
+                </article>
+
+                <article class="card3">
+                    <img
+                        src="https://i.pinimg.com/1200x/04/b4/4a/04b44aea357f2b3d137559c7487d2d7b.jpg"
+                        alt="Gravity Falls"
+                    >
+
+                    <h3>03</h3>
+
+                    <p>MISTÉRIO</p>
+
+                    <h4>GRAVITY FALLS</h4>
+                </article>
+
+            </section>
+
+        </section>
+
+
+        <!-- SEÇÃO FINAL -->
+        <section id="sobre" class="mensagem-final">
+
+            <p>FIM DA FITA?</p>
+
+            <h2>NUNCA.</h2>
+
+            <p>
+                Algumas histórias envelhecem.
+                Outras viram memória.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>NOSTALGIA PLAY</p>
+
+        <nav class="social-icons" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        </nav>
+
+        <p>
+            &copy; 2026 NOSTALGIA PLAY.
+            Feito por Laura Nazareth.
         </p>
 
-        <div class="redes-sociais">
-
-            <a href="#" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="Discord">
-                <i class="fa-brands fa-discord"></i>
-            </a>
-
-            <a href="#" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="rodape-final">
-        <p>© 2026 SmartCoffee Nazareth - Todos os direitos reservados.</p>
-    </div>
-</footer>
-
-
-<script src="script.js"></script>
+    </footer>
 
 </body>
 </html>
