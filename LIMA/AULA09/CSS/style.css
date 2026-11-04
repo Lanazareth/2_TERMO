@@ -1,8 +1,3 @@
-
-/* =========================================
-   1. PALETA DE CORES E CONFIGURAÇÕES GERAIS
-========================================= */
-
 :root {
     --papel-creme: #F6EFE5;
     --branco-quente: #FFFDF8;
@@ -15,18 +10,15 @@
     --carvao-cafe: #2C211B;
     --bege-acinzentado: #D6C4B1;
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
-
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--papel-creme);
@@ -34,10 +26,8 @@ body {
     line-height: 1.7;
 }
 
-h1,
-h2,
-h3 {
-    font-style: italic;
+h1,h2,h3 {
+
     font-weight: 900;
     line-height: 1.2;
 }
@@ -51,20 +41,13 @@ figure {
     min-width: 0;
 }
 
-
-/* =========================================
-   2. CABEÇALHO E NAVEGAÇÃO
-========================================= */
-
 body > header {
     background-color: var(--carvao-cafe);
     padding: 15px 5%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-
     position: sticky;
     top: 0;
     z-index: 100;
@@ -72,13 +55,10 @@ body > header {
     box-shadow: 0 4px 15px rgba(44, 33, 27, 0.12);
 }
 
-/* Logo */
-
 body > header nav ul h2 {
     color: var(--caramelo);
     font-size: 30px;
     font-weight: 900;
-    font-style: italic;
     letter-spacing: -1px;
     white-space: nowrap;
 }
@@ -97,7 +77,6 @@ body > header nav ul {
 body > header nav a {
     color: var(--bege-cafe);
     text-decoration: none;
-    font-style: italic;
     font-weight: 700;
     font-size: 14px;
 
@@ -107,12 +86,6 @@ body > header nav a {
 body > header nav a:hover {
     color: var(--caramelo);
 }
-
-
-/* =========================================
-   3. BANNER INICIAL
-========================================= */
-
 .banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -125,13 +98,11 @@ body > header nav a:hover {
 
 .banner-conteudo p:first-child {
     color: var(--terracota);
-    font-style: italic;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
-
 .banner-conteudo h1 {
     font-size: clamp(34px, 4vw, 56px);
     color: var(--carvao-cafe);
@@ -140,7 +111,6 @@ body > header nav a:hover {
 
 .banner-conteudo p:nth-of-type(2) {
     color: var(--marrom-espresso);
-    font-style: italic;
     font-size: 18px;
     margin-bottom: 30px;
 }
@@ -148,14 +118,10 @@ body > header nav a:hover {
 .banner-conteudo a {
     background-color: var(--madeira);
     color: var(--branco-quente);
-
     padding: 13px 30px;
     text-decoration: none;
     border-radius: 50px;
-
-    font-style: italic;
     font-weight: bold;
-
     display: inline-block;
     transition: 0.3s ease;
 }
@@ -175,24 +141,16 @@ body > header nav a:hover {
 .banner-imagem img {
     width: 100%;
     height: 430px;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(44, 33, 27, 0.15);
-
     transition: transform 0.5s ease;
 }
 
 .banner-imagem:hover img {
     transform: scale(1.04);
 }
-
-
-/* =========================================
-   4. SEÇÃO SOBRE NÓS
-========================================= */
 
 .sobre {
     display: grid;
@@ -264,38 +222,28 @@ body > header nav a:hover {
     margin-bottom: 15px;
 }
 
-/* Frase abaixo do texto */
+
 
 .sobre > p {
     grid-column: 2;
     grid-row: 2;
-
     color: var(--bege-cafe);
     font-style: italic;
     font-size: 15px;
     margin-top: 5px;
 }
-
-/* Botão */
-
 .sobre > a {
     grid-column: 2;
     grid-row: 3;
-
     justify-self: start;
-
     background-color: transparent;
     border: 2px solid var(--bege-cafe);
-
     color: var(--bege-cafe);
-
     padding: 11px 30px;
     text-decoration: none;
     border-radius: 50px;
-
     font-style: italic;
     font-weight: bold;
-
     transition: 0.3s ease;
 }
 
@@ -303,11 +251,6 @@ body > header nav a:hover {
     background-color: var(--bege-cafe);
     color: var(--marrom-espresso);
 }
-
-
-/* =========================================
-   5. SEÇÃO DE CAFÉS E PRODUTOS
-========================================= */
 
 .cafes {
     padding: 90px 8%;
@@ -406,11 +349,6 @@ body > header nav a:hover {
     margin-top: auto;
 }
 
-
-/* =========================================
-   6. SEÇÃO AMBIENTE
-========================================= */
-
 .ambiente {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -424,8 +362,6 @@ body > header nav a:hover {
     color: var(--branco-quente);
 }
 
-/* Textos */
-
 .ambiente header p:first-child {
     color: var(--caramelo);
     font-style: italic;
@@ -433,12 +369,10 @@ body > header nav a:hover {
     letter-spacing: 2px;
     margin-bottom: 12px;
 }
-
 .ambiente header h2 {
     font-size: clamp(32px, 3vw, 44px);
     margin-bottom: 20px;
 }
-
 .ambiente header p:last-of-type {
     color: var(--bege-cafe);
     font-style: italic;
@@ -446,21 +380,15 @@ body > header nav a:hover {
     margin-bottom: 30px;
 }
 
-/* Botão */
-
 .ambiente header a {
     background-color: var(--caramelo);
     color: var(--carvao-cafe);
-
     padding: 13px 30px;
     text-decoration: none;
     border-radius: 50px;
-
     font-style: italic;
     font-weight: bold;
-
     display: inline-block;
-
     transition: 0.3s ease;
 }
 
@@ -468,8 +396,6 @@ body > header nav a:hover {
     background-color: var(--bege-cafe);
     transform: translateY(-3px);
 }
-
-/* Imagem do ambiente */
 
 .ambiente-imagem {
     overflow: hidden;
@@ -479,14 +405,10 @@ body > header nav a:hover {
 .ambiente-imagem img {
     width: 100%;
     height: 420px;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 24px;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-
     transition: transform 0.5s ease;
 }
 
@@ -494,24 +416,14 @@ body > header nav a:hover {
     transform: scale(1.04);
 }
 
-
-/* =========================================
-   7. SEÇÃO DE CONTATO
-========================================= */
-
 .contato {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-
     gap: 60px;
-
     padding: 90px 8%;
-
     background-color: var(--papel-creme);
     align-items: center;
 }
-
-/* Cabeçalho */
 
 .contato-cabecalho h2 {
     color: var(--carvao-cafe);
@@ -525,58 +437,40 @@ body > header nav a:hover {
     font-size: 16px;
 }
 
-/* Formulário */
-
 #formContato {
     display: flex;
     flex-direction: column;
-
     background-color: var(--branco-quente);
-
     padding: 30px;
     border-radius: 20px;
-
     box-shadow: 0 10px 30px rgba(44, 33, 27, 0.06);
 }
-
 #formContato label {
     font-size: 13px;
     font-style: italic;
     font-weight: 600;
-
     color: var(--carvao-cafe);
-
     margin-bottom: 7px;
     margin-top: 15px;
 }
-
 #formContato input,
 #formContato textarea {
     width: 100%;
-
     padding: 13px 15px;
-
     border: 1px solid var(--bege-acinzentado);
     border-radius: 8px;
-
     background-color: var(--branco-quente);
-
     font-family: inherit;
     font-size: 15px;
     color: var(--carvao-cafe);
-
     outline: none;
-
     transition: border-color 0.3s ease,
                 box-shadow 0.3s ease;
 }
 
-/* Foco nos campos */
-
 #formContato input:focus,
 #formContato textarea:focus {
     border-color: var(--terracota);
-
     box-shadow: 0 0 0 3px rgba(184, 101, 72, 0.12);
 }
 
@@ -584,25 +478,17 @@ body > header nav a:hover {
     min-height: 130px;
     resize: vertical;
 }
-
-/* Botão */
-
 #formContato button {
     background-color: var(--terracota);
     color: var(--branco-quente);
-
     padding: 15px;
-
     border: none;
     border-radius: 8px;
-
     font-style: italic;
     font-weight: bold;
     font-size: 16px;
-
     cursor: pointer;
     margin-top: 25px;
-
     transition: 0.3s ease;
 }
 
@@ -610,20 +496,11 @@ body > header nav a:hover {
     background-color: var(--madeira);
     transform: translateY(-2px);
 }
-
-
-/* =========================================
-   8. RODAPÉ
-========================================= */
-
 .rodape {
     background-color: var(--carvao-cafe);
     color: var(--bege-cafe);
-
     padding: 50px 8% 0;
-
     text-align: center;
-
     border-top: 2px solid var(--terracota);
 }
 
@@ -632,15 +509,11 @@ body > header nav a:hover {
     margin: auto;
 }
 
-/* Logo do rodapé */
-
 .rodape h3 {
     font-size: 30px;
     color: var(--caramelo);
-
     font-style: italic;
     font-weight: 900;
-
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
@@ -649,71 +522,46 @@ body > header nav a:hover {
     font-size: 14px;
     font-style: italic;
     color: var(--bege-acinzentado);
-
     margin-bottom: 30px;
 }
-
-/* Redes sociais */
-
 .redes-sociais {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 18px;
     margin-bottom: 35px;
 }
-
 .redes-sociais a {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 45px;
     height: 45px;
-
     background-color: transparent;
     color: var(--caramelo);
-
     border: 1px solid var(--madeira);
     border-radius: 50%;
-
     text-decoration: none;
     font-size: 18px;
-
     transition: 0.3s ease;
 }
-
 .redes-sociais a:hover {
     background-color: var(--terracota);
     color: var(--branco-quente);
-
     border-color: var(--terracota);
-
     transform: translateY(-5px);
 }
 
-/* Direitos autorais */
-
 .rodape-final {
     border-top: 1px solid rgba(232, 214, 194, 0.15);
-
     padding: 20px 10px;
 }
-
 .rodape-final p {
     margin: 0;
-
     font-size: 12px;
     color: var(--bege-acinzentado);
     opacity: 0.8;
 }
-
-
-/* =========================================
-   9. TABLETS
-========================================= */
-
 @media (max-width: 900px) {
 
     body > header {
