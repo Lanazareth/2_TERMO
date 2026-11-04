@@ -39,6 +39,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg-main);
@@ -307,25 +309,224 @@ nav a.active::after {
   color: var(--color-wine-light);
 }
 
-.card3 {
-  display: flex;             /* Deixa os elementos filhos lado a lado */
-  align-items: center;       /* Alinha verticalmente no centro (opcional) */
-  gap: 15px;                 /* Cria um espaçamento entre a imagem e o texto */
+/* =========================================================
+   4. SEÇÃO O PASSADO CONTINUA PRESENTE
+   ========================================================= */
+
+
+#hoje {
+  background-color: var(--color-wine-dark);
+  color: #f5f0e6;
+  padding: 4rem 2.5rem;
+  margin-top: 3rem;
+  overflow: hidden;
 }
 
-.card3 img {
-  max-width: 200px;          /* Ajuste o tamanho da imagem conforme necessário */
+
+
+
+/* Título */
+#hoje > h3 {
+  color: #f5f0e6;
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 
-.card4 {
+/* Container dos três cards */
+#hoje > div {
+  width: 100%;
+  max-width: 610px;
+  margin: 2rem auto 0;
   display: flex;
-  align-items: left; /* Alinha verticalmente ao centro */
-  justify-content: space-between; /* Ou space-around / gap para dar espaçamento */
-/* Espaço entre o texto e a imagem */
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 
+/* Remove os br entre os cards */
+#hoje > br {
+  display: none;
+}
+
+
+/* Estrutura dos cards */
+.card3,
+.card4 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 25px 18px 25px;
+  align-content: center;
+  align-items: center;
+  column-gap: 4rem;
+  min-height: 102px;
+  width: 100%;
+}
+
+
+/* Imagens */
+.card3 img,
+.card4 img {
+  width: 100%;
+  max-width: 273px;
+  height: 102px;
+  object-fit: cover;
+  border-radius: 11px;
+  grid-row: 1 / 4;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Primeiro e terceiro cards:
+   imagem à esquerda */
+.card3 img {
+  grid-column: 1;
+}
+
+
+.card3 h3,
+.card3 p,
+.card3 h4 {
+  grid-column: 2;
+}
+
+
+/* Segundo card:
+   imagem à direita */
+.card4 img {
+  grid-column: 2;
+}
+
+
+.card4 h3,
+.card4 p,
+.card4 h4 {
+  grid-column: 1;
+}
+
+
+/* Número */
+.card3 h3,
+.card4 h3 {
+  grid-row: 1;
+  color: var(--bg-main);
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+
+/* Categoria */
+.card3 p,
+.card4 p {
+  grid-row: 2;
+  color: var(--color-blue-cta);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin: 0;
+}
+
+
+/* Nome da produção */
+.card3 h4,
+.card4 h4 {
+  grid-row: 3;
+  color: #f5f0e6;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+
+/* Círculos decorativos */
+.card3::before,
+.card4::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Círculo roxo no primeiro card */
+.card3:nth-of-type(1)::before {
+  left: calc(50% - 28px);
+  background-color: var(--bg-main);
+}
+
+
+/* Círculo ciano no segundo card */
+.card4::before {
+  right: calc(50% - 28px);
+  background-color: var(--color-blue-cta);
+}
+
+
+/* Círculo rosa no terceiro card */
+.card3:last-of-type::before {
+  left: calc(50% - 28px);
+  background-color: var(--bg-main);
+}
+
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+  #hoje {
+    padding: 3rem 1.2rem;
+  }
+
+
+  #hoje > h3 {
+    font-size: 1.5rem;
+  }
+
+
+  #hoje > div {
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+
+  .card3,
+  .card4 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+
+
+  .card3 img,
+  .card4 img {
+    height: 95px;
+  }
+
+
+  .card3 h4,
+  .card4 h4 {
+    font-size: 0.75rem;
+  }
+
+
+  .card3::before,
+  .card4::before {
+    width: 45px;
+    height: 45px;
+  }
+}
 
 footer {
   background-color: var(--color-wine-dark);
