@@ -1,134 +1,198 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta name="description" content="Uma viagem nostálgica pelos clássicos da TV, heróis e animações que marcaram gerações.">
+    <title>Nostalgia Play | Histórias que atravessaram gerações</title>
 </head>
 <body>
-        <header>
-            <div class="logo-text">
-                <h4>NOSTALGIA PLAY</h4>
-            </div>
-        </div>
-        <nav>
+
+    <header>
+        <h1 class="logo-text">NOSTALGIA PLAY</h1>
+
+        <nav aria-label="Navegação principal">
             <ul>
-                <li><a href="inicio" class="active">Início</a></li>
-                <li><a href="classicos">clássicos</a></li>
-                <li><a href="herois">HERÒIS</a></li>
-                <li><a href="hoje">HOJE</a></li>
-                <li><button type="submit"  class="meu-botao">Sobre</button></li>
+                <li>
+                    <a href="#inicio" class="active">Início</a>
+                </li>
+                <li>
+                    <a href="#classicos">Clássicos</a>
+                </li>
+                <li>
+                    <a href="#herois">Heróis</a>
+                </li>
+                <li>
+                    <a href="#hoje">Hoje</a>
+                </li>
+                <li>
+                    <a href="#sobre" class="meu-botao">Sobre</a>
+                </li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
+
         <section id="inicio" class="hero-section">
-            <div id="inicio" class="hero-text">
+            <article class="hero-text">
                 <p>80 . 90 . 2000</p>
-                <h1>HISTÓRIAS QUE ATRAVESSARAM GERAÇÕES.</h1>
-                <p>Uma viagem pela TV, pelos heróis e pelas animações que transformaram tardes comuns em grandes aventuras.</p>
-                <button type="submit" class="meu-botao">Apertar o Play</button>
-            </div>
-            <div class="hero-image">
-                <img class="img_principal" src="https://i.pinimg.com/736x/a3/25/13/a325138df60778379ab85065c9842f1b.jpg" alt="IMAGEM-PRINCIPAL">
-            </div>
+                <h2>HISTÓRIAS QUE ATRAVESSARAM GERAÇÕES.</h2>
+                <p>
+                    Uma viagem pela TV, pelos heróis e pelas animações
+                    que transformaram tardes comuns em grandes aventuras.
+                </p>
+                <a href="#classicos" class="meu-botao">
+                    Apertar o Play
+                </a>
+            </article>
+            <figure class="hero-image">
+                <img
+                    class="img_principal"
+                    src="https://i.pinimg.com/736x/a3/25/13/a325138df60778379ab85065c9842f1b.jpg"
+                    alt="Personagens e animações que marcaram gerações"
+                >
+            </figure>
         </section>
 
-        <br>
-
-        <section id="classicos">
-            <p>ANTES DOS ANOS 90</p>
-            <h2>CLÁSSICOS QUE CHEGARAM PARA FICAR</h2>
-            <p>Duas produções anteriores aos anos 90 que permaneceram vivas na memoria de quem creseu cercado por fantasia e aventura.</p>
-            <div id="classicos" class="modelos-grid">
-                <div class="card">
-                    <img src="https://i.pinimg.com/1200x/1f/ee/7b/1fee7b0451af0aa4b98e6060e1296818.jpg" alt="CAVALEIROS DO ZODÍACO">
+        <section id="classicos" class="modelos-section">
+            <header>
+                <p>ANTES DOS ANOS 90</p>
+                <h2>CLÁSSICOS QUE CHEGARAM PARA FICAR</h2>
+                <p class="section-subtitle">
+                    Duas produções anteriores aos anos 90 que permaneceram
+                    vivas na memória de quem cresceu cercado por fantasia
+                    e aventura.
+                </p>
+            </header>
+            <section class="modelos-grid" aria-label="Clássicos da televisão">
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/1f/ee/7b/1fee7b0451af0aa4b98e6060e1296818.jpg"
+                        alt="Cavaleiros do Zodíaco"
+                    >
                     <p>1986</p>
                     <h3>CAVALEIROS DO ZODÍACO</h3>
-                </div>
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/97/f2/39/97f2398cb6e4936c5b8cfddef1fbb4e9.jpg" alt="CAVERNA DO DRAGÃO">
-                    <P>1983</P>
+                </article>
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/736x/97/f2/39/97f2398cb6e4936c5b8cfddef1fbb4e9.jpg"
+                        alt="Caverna do Dragão"
+                    >
+                    <p>1983</p>
                     <h3>CAVERNA DO DRAGÃO</h3>
-                </div>
+                </article>
+            </section>
         </section>
 
-     <br>
 
-     <section id="herois" class="modelos-section">
-        <p>FAIXA ESPECIAL</p>
-            <h2>HERÓIS QUE DOMINAVAM A TV</h2>
-            <P>Tokusa, ação e personagens que viraram memoria afetiva.</P>
-            <div id="herois" class="modelos-grid">
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/44/94/f3/4494f38e191dd4248ebaf84099d90bd0.jpg" alt="JASPION">
+        <section id="herois" class="modelos-section">
+            <header>
+                <p>FAIXA ESPECIAL</p>
+                <h2>HERÓIS QUE DOMINAVAM A TV</h2>
+                <p class="section-subtitle">
+                    Tokusatsu, ação e personagens que viraram memória afetiva.
+                </p>
+            </header>
+            <section class="modelos-grid" aria-label="Heróis clássicos">
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/736x/44/94/f3/4494f38e191dd4248ebaf84099d90bd0.jpg"
+                        alt="Jaspion"
+                    >
                     <p>METAL HERO</p>
                     <h3>JASPION</h3>
-                </div>
-                <div class="card">
-                    <img src="https://i.pinimg.com/1200x/a8/6f/1d/a86f1d359565a9131294c451219bba54.jpg" alt="JIRAIYA">
-                    <P>NINJA HERO</P>
+                </article>
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/a8/6f/1d/a86f1d359565a9131294c451219bba54.jpg"
+                        alt="Jiraiya"
+                    >
+                    <p>NINJA HERO</p>
                     <h3>JIRAIYA</h3>
-                </div>
-                <div class="card">
-                    <img src="https://i.pinimg.com/1200x/85/83/3b/85833b691bfddf60a0d8cef0c418464d.jpg" alt="KAMEN RIDER BLACK">
+                </article>
+                <article class="card">
+                    <img
+                        src="https://i.pinimg.com/1200x/85/83/3b/85833b691bfddf60a0d8cef0c418464d.jpg"
+                        alt="Kamen Rider Black"
+                    >
                     <p>TOKUSATSU</p>
                     <h3>KAMEN RIDER BLACK</h3>
-                </div>
-            </div>
+                </article>
+            </section>
         </section>
 
-        <br>
 
-        <section id="hoje">
-            <p>O PASSADO CONTINUA PRESEENTE</p>
-            <h3>NOVAS PRODUÇÕES, </h3>
-            <h3> VELHAS EMOÇÕES.</h3>
-            <div class=""> 
-                <div id="hoje" class="card3">
-                    <img src="https://i.pinimg.com/736x/3f/2e/41/3f2e41c6d81d99bad4d0da88fd2b4271.jpg" alt="imagem_X-men'97">
+        <section id="hoje" class="modelos-section">
+            <header>
+                <p>O PASSADO CONTINUA PRESENTE</p>
+                <h2>
+                    NOVAS PRODUÇÕES,
+                    <br>
+                    VELHAS EMOÇÕES.
+                </h2>
+            </header>
+
+            <section class="hoje-lista" aria-label="Produções atuais">
+                <article class="card3">
+                    <img
+                        src="https://i.pinimg.com/736x/3f/2e/41/3f2e41c6d81d99bad4d0da88fd2b4271.jpg"
+                        alt="X-Men 97"
+                    >
                     <h3>01</h3>
                     <p>CONTINUAÇÃO</p>
                     <h4>X-MEN'97</h4>
-                </div>
-                <br>
-                <div class="card4">
-                    <img src="https://i.pinimg.com/736x/07/31/dc/0731dccc6a782c61f4243619b507a366.jpg" alt="imagem_OS_SIMPSONS">
+                </article>
+                <article class="card4">
+                    <img
+                        src="https://i.pinimg.com/736x/07/31/dc/0731dccc6a782c61f4243619b507a366.jpg"
+                        alt="Os Simpsons"
+                    >
                     <h3>02</h3>
                     <p>CULTURA POP</p>
                     <h4>OS SIMPSONS</h4>
-                </div>
-                <br>
-                <div class="card3">
-                    <img src="https://i.pinimg.com/1200x/04/b4/4a/04b44aea357f2b3d137559c7487d2d7b.jpg" alt="imagem_GRAVITY_FALLS">
+                </article>
+                <article class="card3">
+                    <img
+                        src="https://i.pinimg.com/1200x/04/b4/4a/04b44aea357f2b3d137559c7487d2d7b.jpg"
+                        alt="Gravity Falls"
+                    >
                     <h3>03</h3>
                     <p>MISTÉRIO</p>
                     <h4>GRAVITY FALLS</h4>
-                </div>
-            </div>
+                </article>
+            </section>
         </section>
 
-        <br>
-
-        <section><center><div>
+        <section id="sobre" class="mensagem-final">
             <p>FIM DA FITA?</p>
-            <H1><STRong>NUNCA.</STRong></H1>
-            <P>Algumas histórias envelhecem. Outras viram memória.</P>
-        </div></center>
-    </section>
+            <h2>NUNCA.</h2>
+            <p>
+                Algumas histórias envelhecem.
+                Outras viram memória.
+            </p>
 
+        </section>
     </main>
- 
+
     <footer>
         <p>NOSTALGIA PLAY</p>
-        <div class="social-icons">
-            <a href="">Instagram</a>
-            <a href="">GitHub</a>
-        </div>
-        <p>&copy; 2026 NOSTALGIA PLAY. Feito por Laura Nazareth.</p>
+        <nav class="social-icons" aria-label="Redes sociais">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        </nav>
+
+        <p>
+            &copy; 2026 NOSTALGIA PLAY.
+            Feito por Laura Nazareth.
+        </p>
     </footer>
-    
+
 </body>
 </html>
