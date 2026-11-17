@@ -115,3 +115,13 @@ WHERE ano_publicacao BETWEEN 1990 AND 2026;
 SELECT COUNT(*) AS quantidade, SUM(quantidade_disponivel) AS SOMA,
 AVG(quantidade_disponivel) AS MEDIA, MAX(quantidade_disponivel) AS
 MAXIMO, MIM(quantidade_disponivel) AS MINIMO FROM livro;
+
+SELECT 
+    E.id_locacao,
+    U.nome AS nome_usuario,
+    L.titulo AS titulo_livro,
+    E.data_emprestimo,
+    E.status_emprestimo
+FROM EMPRESTIMO E
+INNER JOIN USUARIO U ON E.id_usuario = U.id_usuario
+INNER JOIN LIVRO L ON E.id_livro = L.id_livro;
