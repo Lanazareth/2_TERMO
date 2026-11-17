@@ -169,3 +169,79 @@ LEFT JOIN locacao E ON U.id_cliente = E.id_cliente
 GROUP BY U.id_cliente, U.nome_cliente;
 ------------------------------------------------------------------------------
 
+START TRANSACTION;
+INSERT INTO locacao (data_prevista, status_locacao, id_cliente, id_jogo) 
+VALUES ('2026-11-20', 'ABERTO', 4, 5);
+
+UPDATE jogo
+SET quantidade_disponivel = quantidade_disponivel - 1 
+WHERE id_jogo = 27;
+
+
+SELECT * FROM locacao
+WHERE id_cliente = 4 
+AND id_jogo = 5;
+SELECT id_jogo, quantidade_disponivel
+FROM jogo
+WHERE id_jogo = 5;
+
+COMMIT;
+
+START TRANSACTION;
+
+UPDATE jogo
+SET quantidade_disponivel = 99 
+WHERE id_jogo = 1;
+
+-- Conferência dentro da transação
+SELECT id_jogo, quantidade_disponivel
+FROM jogo
+WHERE id_jogo = 1;
+
+ROLLBACK;
+
+SELECT id_jogo, quantidade_disponivel 
+FROM jogo
+WHERE id_jogo = 1;
+
+START TRANSACTION;
+UPDATE jogo SET quantidade_disponivel = quantidade_disponivel + 1 
+WHERE id_jogo = 5;
+
+SAVEPOINT ponto_primeira_alteracao;
+
+UPDATE jogo SET quantidade_disponivel = quantidade_disponivel + 1
+WHERE id_jogo = 5;
+
+ROLLBACK TO SAVEPOINT ponto_primeira_alteracao;
+
+COMMIT;
+SELECT id_jogo, quantidade_disponivel 
+FROM jogo
+WHERE id_jogo IN (5, 9);
+
+START TRANSACTION;
+UPDATE locacao 
+SET status_locacao = 'DEVOLVIDO', 
+    data_devolucao = CURDATE() 
+WHERE id_locacao = 1 AND status_locacao = 'ABERTO';
+
+UPDATE jogo
+SET quantidade_disponivel = quantidade_disponivel + 1 
+WHERE id_jogo = 1;
+
+COMMIT;
+
+-- ;Em comentários SQL, explique qual recurso evita: 
+-- (a) e-mail repetido: unique
+-- (b) código de jogo repetido: unique
+-- (c) estoque negativo: check
+-- (d) locação de cliente inexistente : FOREIGN KEY
+-- (e) exclusão de jogo com histórico: FOREIGN KEY
+-- (f) locação gravada sem baixa de estoque:START TRANSACTION,ROLLBACK e commit 
+-- -- (g) locação quando não há unidades disponíveis. Diferencie restrições do banco, transações e validações da aplicação?:
+-- restricoes: atuam de forma defiitiva na intregridade dos dados
+
+-- transacoes:
+
+-- valdacoes:
