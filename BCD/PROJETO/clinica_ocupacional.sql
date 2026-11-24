@@ -46,7 +46,7 @@ CREATE TABLE profissional (
 
 CREATE TABLE tipo_exame (
     id_tipo_exame INT AUTO_INCREMENT,
-    categoria_exame VARCHAR(50) NOT NULL
+    categoria_exame VARCHAR(50) NOT NULL,
     nome_exame VARCHAR(100) NOT NULL,
     descricao VARCHAR(255),
     valor DECIMAL(10,2),
@@ -132,7 +132,7 @@ CREATE TABLE aso (
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
-INSERT INTO empresa (razao_social, nome_fantasia, cnpj, telefone, email, endereco)VALUES
+INSERT INTO empresa (razao_social, nome_empresa, cnpj, telefone, email, endereco)VALUES
     ('Monali Transportes LTDA', 'Monali Transportes', '12345678000199', '(11) 99999-1111','contato@monali.com', 'Rua Central, 100');
 
 
@@ -140,17 +140,25 @@ INSERT INTO profissional(nome_completo, cpf, registro_profissional, especialidad
     ('Dra. Ana Souza', '11122233344', 'CRM123456','Medicina do Trabalho', '(11) 98888-2222','ana@clinica.com');
 
 
-INSERT INTO paciente(id_empresa, nome_completo, cpf, data_nascimento, sexo,telefone, email, cargo, setor, data_admissao)VALUES
-    (1, 'Carlos Oliveira', '55566677788', '1995-04-10', 'M','(11) 97777-3333', 'carlos@email.com','Auxiliar Administrativo', 'Financeiro', '2025-01-15');
+INSERT INTO paciente (id_empresa, nome_completo, cpf, data_nascimento, telefone, email, cargo, setor)
+VALUES (1, 'Carlos Oliveira', '55566677788', '1995-04-10', '(11) 97777-3333', 'carlos@email.com', 'Auxiliar Administrativo', 'Financeiro');
 
 
-INSERT INTO tipo_exame (nome_exame, descricao, valor, prazo_validade_dias)VALUES
-    ('Exame Clínico Ocupacional','Avaliação clínica realizada pelo médico do trabalho',150.00, 365),
-    ('Audiometria','Avaliação da capacidade auditiva do trabalhador', 80.00, 365),
-    ('Acuidade Visual','Avaliação da capacidade visual',60.00, 365),
-    ('Espirometria','Avaliação da função pulmonar',120.00, 365);
+INSERT INTO tipo_exame (categoria_exame, nome_exame, descricao, valor, prazo_validade_dias) VALUES
+('Clínico', 'Exame Clínico Ocupacional', 'Avaliação clínica realizada pelo médico do trabalho', 150.00, 365),
+('Complementar', 'Audiometria', 'Avaliação da capacidade auditiva do trabalhador', 80.00, 365),
+('Complementar', 'Acuidade Visual', 'Avaliação da capacidade visual', 60.00, 365),
+('Complementar', 'Espirometria', 'Avaliação da função pulmonar', 120.00, 365);
 
 
-INSERT INTO agendamento
-    (id_paciente, id_profissional, data_agendamento, hora_agendamento, tipo_atendimento, status_agendamento)VALUES
-    (1, 1, '2026-12-01', '08:30:00', 'Admissional', 'Agendado');
+INSERT INTO agendamento(id_paciente, id_profissional, data_agendamento, hora_agendamento, tipo_atendimento, status_agendamento)VALUES
+(1, 1, '2026-12-01', '08:30:00', 'Admissional', 'Agendado');
+
+
+
+
+
+
+
+
+
