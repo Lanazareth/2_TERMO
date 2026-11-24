@@ -1,41 +1,364 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
-    <title>Festival de </title>
-</head>
-<body>
-   <header class="inicio">
-<a href="#marca"><h1><span>Festa</span>dellaNonna</a></h1> 
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5f0f40" />
+    <meta
+      name="description"
+      content="Festa della Nonna — un festival di gastronomia italiana per riunire sapori, musica e storie intorno alla tavola."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Festa della Nonna | Festival di Gastronomia Italiana</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-<nav>
-    <ul class="navegacao">
-        <li><a href="#inicio">inizio</a></li>
-        <li><a href="#atracoes">attrazioni</a></li>
-        <li><a href="#programações">orari</a></li>
-        <li><a href="#sobre">Su</a></li>
-    </ul>
-</nav>
-</header>
+    <header class="site-header" id="marca">
+      <nav class="container header-inner" aria-label="Navigazione principale">
+        <a class="brand" href="#inizio" aria-label="Festa della Nonna — inizio">
+          <span class="brand-mark" aria-hidden="true"
+            ><span>F</span><span>N</span></span
+          >
+          <span class="brand-name"
+            ><strong>Festa</strong><em>della Nonna</em></span
+          >
+        </a>
 
-<main>
-    <section id="inicio" class="inicio-sec">
-        <article><h1>Mangia che ti fa bene!</h1>
-        <p>Preparate l’appetito per un’esperienza calorosa, sostanziosa e ricca di sentimento. Festa della Nonna riunisce il meglio della cucina tradizionale italiana: pasta fresca fatta a mano, pizze autentiche, polenta, una selezione curata di vini e quegli irresistibili dolci classici della nostra tradizione. Il tutto accompagnato da musica italiana dal vivo e dall’atmosfera accogliente e familiare di un pranzo domenicale in famiglia. Portate i vostri cari e venite a celebrare la gioia della buona tavola! Mangia che ti fa bene!</p>
-        </article>
-        <figure class="img-princ">
-            <img src="https://i.pinimg.com/736x/ef/8e/4c/ef8e4c477117fdd071a3e0e422b39bc5.jpg" alt="imagem massa">
-            <figcaption></figcaption>
-        </figure>
-        
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="main-menu"
+        >
+          <span></span><span></span><span></span>
+          <span class="sr-only">Apri il menu</span>
+        </button>
 
-    </section>
-</main>
-    
-</body>
+        <ul id="main-menu" class="main-nav">
+          <li><a class="nav-link is-active" href="#inizio">Inizio</a></li>
+          <li><a class="nav-link" href="#attrazioni">Attrazioni</a></li>
+          <li><a class="nav-link" href="#programma">Programma</a></li>
+          <li><a class="nav-link" href="#chi-siamo">Chi siamo</a></li>
+          <li>
+            <a class="nav-cta" href="#programma"
+              >Vedi orari <span aria-hidden="true">↗</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenuto">
+      <section
+        id="inizio"
+        class="hero section-shell"
+        aria-labelledby="hero-title"
+      >
+        <span class="hero-orbit orbit-one" aria-hidden="true"></span>
+        <span class="hero-orbit orbit-two" aria-hidden="true"></span>
+
+        <section class="container hero-grid">
+          <article class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> Festival di gastronomia
+              italiana
+            </p>
+            <h1 id="hero-title">Mangia che ti <span>fa bene!</span></h1>
+            <p class="hero-lead">
+              Una tavola piena di storie, sapori e incontri. Vieni a celebrare
+              il meglio della cucina italiana, con il calore di una domenica a
+              casa della nonna.
+            </p>
+            <p class="hero-actions">
+              <a class="button button-primary" href="#attrazioni"
+                >Scopri le attrazioni <span aria-hidden="true">→</span></a
+              >
+              <a class="text-link" href="#chi-siamo"
+                >Conosci la festa <span aria-hidden="true">↗</span></a
+              >
+            </p>
+            <p class="hero-note">
+              <span class="note-icon" aria-hidden="true">✦</span
+              ><span>Ricette di famiglia, musica dal vivo e tanto amore.</span>
+            </p>
+          </article>
+
+          <figure class="hero-visual">
+            <figure class="hero-photo-frame">
+              <span class="photo-label label-top">fatto a mano</span>
+              <img
+                src="https://i.pinimg.com/736x/ef/8e/4c/ef8e4c477117fdd071a3e0e422b39bc5.jpg"
+                alt="Pasta fresca preparata a mano"
+              />
+              <figcaption class="photo-label label-bottom">
+                buon appetito!
+              </figcaption>
+            </figure>
+            <aside class="hero-stamp" aria-label="Edizione 2026">
+              <span>dal</span><strong>2026</strong><small>con amore</small>
+            </aside>
+          </figure>
+        </section>
+
+        <p class="scroll-cue" aria-hidden="true">
+          <span></span> scorri per scoprire
+        </p>
+      </section>
+
+      <section
+        id="attrazioni"
+        class="attractions section-space"
+        aria-labelledby="attractions-title"
+      >
+        <section class="container">
+          <header class="section-heading">
+            <section>
+              <p class="eyebrow eyebrow-dark">
+                <span class="eyebrow-line"></span> Una festa per tutti i sensi
+              </p>
+              <h2 id="attractions-title">
+                Sapori che <em>raccontano storie</em>
+              </h2>
+            </section>
+            <p class="section-intro">
+              Dalla pasta tirata a mano all’ultima nota della tarantella, ogni
+              angolo della festa è pensato per farti sentire a casa.
+            </p>
+          </header>
+
+          <section class="attraction-grid" aria-label="Attrazioni del festival">
+            <article class="attraction-card card-wine">
+              <figure class="card-art art-pasta">
+                <span aria-hidden="true">🍝</span><small>01</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">preparato al momento</p>
+                <h3>La Pasta della Nonna</h3>
+                <p>
+                  Pasta fresca, sugo lento e quel segreto che passa di
+                  generazione in generazione.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+
+            <article class="attraction-card card-orange">
+              <figure class="card-art art-pizza">
+                <span aria-hidden="true">🍕</span><small>02</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">forno a legna</p>
+                <h3>Pizza al Taglio</h3>
+                <p>
+                  Fette croccanti, ingredienti freschi e il profumo
+                  irresistibile del forno italiano.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+
+            <article class="attraction-card card-teal">
+              <figure class="card-art art-wine">
+                <span aria-hidden="true">🍷</span><small>03</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">calici e conversazioni</p>
+                <h3>Vino &amp; Storie</h3>
+                <p>
+                  Etichette selezionate, produttori ospiti e storie da
+                  condividere con un brindisi.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+
+            <article class="attraction-card card-yellow">
+              <figure class="card-art art-gelato">
+                <span aria-hidden="true">🍨</span><small>04</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">dolce finale</p>
+                <h3>Gelato &amp; Cannoli</h3>
+                <p>
+                  Una pausa dolce con ricette classiche e sapori che scaldano il
+                  cuore.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+
+            <article class="attraction-card card-red">
+              <figure class="card-art art-music">
+                <span aria-hidden="true">🎶</span><small>05</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">dal vivo</p>
+                <h3>Musica Italiana</h3>
+                <p>
+                  Canzoni da cantare insieme, ballare senza fretta e rendere la
+                  tavola ancora più felice.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+
+            <article class="attraction-card card-cream">
+              <figure class="card-art art-market">
+                <span aria-hidden="true">🫒</span><small>06</small>
+              </figure>
+              <section class="card-content">
+                <p class="card-kicker">bottega</p>
+                <h3>Mercato Italiano</h3>
+                <p>
+                  Ingredienti, ceramiche e piccoli tesori per portare un
+                  pezzetto della festa a casa.
+                </p>
+                <button type="button" class="card-link" aria-expanded="false">
+                  Scopri <span aria-hidden="true">↗</span>
+                </button>
+              </section>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <section
+        id="programma"
+        class="schedule section-space"
+        aria-labelledby="program-title"
+      >
+        <section class="container schedule-grid">
+          <article class="schedule-heading">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> Amore senza sosta
+            </p>
+            <h2 id="program-title">Un programma da <em>assaporare</em></h2>
+            <p>
+              Scegli il tuo momento preferito e vivi una giornata intera di
+              cultura, buon cibo e incontri da ricordare.
+            </p>
+            <p class="date-badge">
+              <strong>12—14</strong><span>DIC<br /><b>2026</b></span>
+            </p>
+          </article>
+
+          <ol class="schedule-list">
+            <li class="schedule-item">
+              <time>11:00</time>
+              <section>
+                <span class="schedule-tag tag-orange">apertura</span>
+                <h3>Benvenuti, amici!</h3>
+                <p>Porte aperte, mercato gastronomico e caffè italiano.</p>
+              </section>
+              <span class="schedule-arrow" aria-hidden="true">↗</span>
+            </li>
+            <li class="schedule-item">
+              <time>12:30</time>
+              <section>
+                <span class="schedule-tag tag-red">cucina</span>
+                <h3>La pasta in famiglia</h3>
+                <p>Laboratorio di pasta fresca con la chef Nonna Rosa.</p>
+              </section>
+              <span class="schedule-arrow" aria-hidden="true">↗</span>
+            </li>
+            <li class="schedule-item">
+              <time>15:00</time>
+              <section>
+                <span class="schedule-tag tag-teal">musica</span>
+                <h3>Concerto al tramonto</h3>
+                <p>Classici italiani dal vivo sul palco principale.</p>
+              </section>
+              <span class="schedule-arrow" aria-hidden="true">↗</span>
+            </li>
+            <li class="schedule-item">
+              <time>18:30</time>
+              <section>
+                <span class="schedule-tag tag-yellow">brindisi</span>
+                <h3>A tavola, tutti!</h3>
+                <p>Cena comunitaria e chiusura con tarantella.</p>
+              </section>
+              <span class="schedule-arrow" aria-hidden="true">↗</span>
+            </li>
+          </ol>
+        </section>
+      </section>
+
+      <section
+        id="chi-siamo"
+        class="about section-space"
+        aria-labelledby="about-title"
+      >
+        <section class="container about-grid">
+          <figure class="about-art" aria-label="La cucina è amore">
+            <span class="about-quote">“La cucina<br /><em>è amore</em>.”</span
+            ><span class="about-sticker"
+              >fatto con<br /><strong>amore</strong></span
+            >
+          </figure>
+          <article class="about-copy">
+            <p class="eyebrow eyebrow-dark">
+              <span class="eyebrow-line"></span> La storia dietro la tavola
+            </p>
+            <h2 id="about-title">
+              Più di un festival.<br /><em>Una riunione di famiglia.</em>
+            </h2>
+            <p>
+              La Festa della Nonna è nata dal desiderio di riunire le persone
+              intorno a ciò che l’Italia ha di più bello: la generosità della
+              tavola, la gioia degli incontri e le storie custodite in ogni
+              ricetta.
+            </p>
+            <p>
+              Vieni con la famiglia, con gli amici o anche da solo. Qui c’è
+              sempre posto per un’altra persona — e per un altro piatto di
+              pasta.
+            </p>
+            <a class="button button-secondary" href="#inizio"
+              >Torna all’inizio <span aria-hidden="true">↑</span></a
+            >
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section class="container footer-simple">
+        <a class="brand brand-light" href="#inizio"
+          ><span class="brand-mark" aria-hidden="true"
+            ><span>F</span><span>N</span></span
+          ><span class="brand-name"
+            ><strong>Festa</strong><em>della Nonna</em></span
+          ></a
+        >
+        <address class="footer-contact">
+          <a href="mailto:ciao@festadellanonna.com">ciao@festadellanonna.com</a
+          ><span>@festadellanonna</span>
+        </address>
+        <a class="footer-top" href="#marca">torna su ↑</a>
+      </section>
+      <p class="container footer-bottom">
+        <span>© <span id="current-year">2026</span> Festa della Nonna</span
+        ><span>San Paolo, Brasile</span>
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>
