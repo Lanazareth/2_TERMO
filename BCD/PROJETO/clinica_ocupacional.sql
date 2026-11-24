@@ -46,6 +46,7 @@ CREATE TABLE profissional (
 
 CREATE TABLE tipo_exame (
     id_tipo_exame INT AUTO_INCREMENT,
+    categoria_exame VARCHAR(50) NOT NULL
     nome_exame VARCHAR(100) NOT NULL,
     descricao VARCHAR(255),
     valor DECIMAL(10,2),
@@ -86,3 +87,70 @@ CREATE TABLE atendimento (
     CONSTRAINT fk_atendimento_profissional FOREIGN KEY (id_profissional) REFERENCES profissional(id_profissional),
     CONSTRAINT fk_atendimento_agendamento FOREIGN KEY (id_agendamento) REFERENCES agendamento(id_agendamento)
 );
+CREATE TABLE exame_realizado (
+    id_exame_realizado INT AUTO_INCREMENT,
+    id_atendimento INT NOT NULL,
+    id_tipo_exame INT NOT NULL,
+    data_exame DATETIME NOT NULL,
+    resultado VARCHAR(100),
+    observacao TEXT,
+    status_exame ENUM(
+        'Solicitado',
+        'Em Analise',
+        'Concluido',
+        'Cancelado'
+    ) DEFAULT 'Solicitado',
+
+   CONSTRAINT pk_exame_realizado PRIMARY KEY (id_exame_realizado),
+    CONSTRAINT fk_exame_atendimento FOREIGN KEY (id_atendimento) REFERENCES atendimento(id_atendimento),
+    CONSTRAINT fk_exame_tipo FOREIGN KEY (id_tipo_exame) REFERENCES tipo_exame(id_tipo_exame)
+);
+
+
+CREATE TABLE aso (
+    id_aso INT AUTO_INCREMENT,
+    id_atendimento INT NOT NULL,
+    data_emissao DATE NOT NULL,
+    tipo_aso ENUM(
+        'Admissional',
+        'Periodico',
+        'Demissional',
+        'Retorno',
+        'Mudanca de Funcao'
+    ) NOT NULL,
+    resultado ENUM(
+        'Apto',
+        'Inapto',
+        'Apto com Restricao'
+    ) NOT NULL,
+    restricoes TEXT,
+    observacoes TEXT,
+
+    CONSTRAINT pk_aso PRIMARY KEY (id_aso),
+    CONSTRAINT fk_aso_atendimento FOREIGN KEY (id_atendimento) REFERENCES atendimento(id_atendimento)
+);
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO empresa (razao_social, nome_fantasia, cnpj, telefone, email, endereco)VALUES
+    ('Monali Transportes LTDA', 'Monali Transportes', '12345678000199', '(11) 99999-1111','contato@monali.com', 'Rua Central, 100');
+
+
+INSERT INTO profissional(nome_completo, cpf, registro_profissional, especialidade, telefone, email)VALUES
+    ('Dra. Ana Souza', '11122233344', 'CRM123456','Medicina do Trabalho', '(11) 98888-2222','ana@clinica.com');
+
+
+INSERT INTO paciente(id_empresa, nome_completo, cpf, data_nascimento, sexo,telefone, email, cargo, setor, data_admissao)VALUES
+    (1, 'Carlos Oliveira', '55566677788', '1995-04-10', 'M','(11) 97777-3333', 'carlos@email.com','Auxiliar Administrativo', 'Financeiro', '2025-01-15');
+
+
+INSERT INTO tipo_exame (nome_exame, descricao, valor, prazo_validade_dias)VALUES
+    ('Exame Clínico Ocupacional','Avaliação clínica realizada pelo médico do trabalho',150.00, 365),
+    ('Audiometria','Avaliação da capacidade auditiva do trabalhador', 80.00, 365),
+    ('Acuidade Visual','Avaliação da capacidade visual',60.00, 365),
+    ('Espirometria','Avaliação da função pulmonar',120.00, 365);
+
+
+INSERT INTO agendamento
+    (id_paciente, id_profissional, data_agendamento, hora_agendamento, tipo_atendimento, status_agendamento)VALUES
+    (1, 1, '2026-12-01', '08:30:00', 'Admissional', 'Agendado');
