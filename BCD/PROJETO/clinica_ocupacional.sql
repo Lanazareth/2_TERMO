@@ -130,8 +130,6 @@ CREATE TABLE aso (
     CONSTRAINT fk_aso_atendimento FOREIGN KEY (id_atendimento) REFERENCES atendimento(id_atendimento)
 );
 
----------------------------------------------------------------------------------------------------------------------------------
-
 INSERT INTO empresa (razao_social, nome_empresa, cnpj, telefone, email, endereco)VALUES
     ('Monali Transportes LTDA', 'Monali Transportes', '12345678000199', '(11) 99999-1111','contato@monali.com', 'Rua Central, 100');
 
@@ -155,10 +153,65 @@ INSERT INTO agendamento(id_paciente, id_profissional, data_agendamento, hora_age
 (1, 1, '2026-12-01', '08:30:00', 'Admissional', 'Agendado');
 
 
+SELECT nome_exame, categoria_exame, valor 
+FROM tipo_exame 
+WHERE categoria_exame = 'Complementar' 
+ORDER BY valor DESC;
 
 
+SELECT 
+    a.data_agendamento,
+    a.hora_agendamento,
+    p.nome_completo AS paciente,
+    e.nome_empresa AS empresa,
+    pr.nome_completo AS medico,
+    a.tipo_atendimento,
+    a.status_agendamento
+FROM agendamento a
+INNER JOIN paciente p ON a.id_paciente = p.id_paciente
+INNER JOIN empresa e ON p.id_empresa = e.id_empresa
+INNER JOIN profissional pr ON a.id_profissional = pr.id_profissional;
 
 
+SELECT 
+    aso.id_aso,
+    aso.data_emissao,
+    p.nome_completo AS trabalhador,
+    p.cpf,
+    p.cargo,
+    aso.tipo_aso,
+    aso.resultado
+FROM aso
+INNER JOIN atendimento at ON aso.id_atendimento = at.id_atendimento
+INNER JOIN paciente p ON at.id_paciente = p.id_paciente;
 
+
+SELECT 
+    categoria_exame,
+    COUNT(*) AS quantidade_exames,
+    SUM(valor) AS valor_total_tabela
+FROM tipo_exame
+GROUP BY categoria_exame;
+
+START TRANSACTION;
+
+UPDATE agendamento 
+SET status_agendamento = 'Realizado' 
+WHERE id_agendamento = 1;
+
+
+INSERT INTO atendimento (id_paciente, id_profissional, id_agendamento, data_atendimento, tipo_atendimento, queixa_principal, observacoes)
+VALUES (1, 1, 1, '2026-12-01 08:35:00', 'Admissional', 'Sem queixas clínicas', 'Paciente em boas condições gerais.');
+
+
+INSERT INTO exame_realizado (id_atendimento, id_tipo_exame, data_exame, resultado, status_exame)
+VALUES (1, 1, '2026-12-01 08:50:00', 'Normal', 'Concluido');
+
+
+INSERT INTO aso (id_atendimento, data_emissao, tipo_aso, resultado, observacoes)
+VALUES (1, '2026-12-01', 'Admissional', 'Apto', 'Apto para exercer a função de Auxiliar Administrativo.');
+
+
+COMMIT;
 
 
